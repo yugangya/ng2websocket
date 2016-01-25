@@ -19,7 +19,7 @@ You can download ng2websocket by:
 
 name        | arguments                                              | description
 ------------|-------------------------------------------------------------------------------------------------------|------------
-ng2websocket <br>_constructor_ | addr:String,proto:string,reconnectMaxTimeS:number,<br>onMessage,onOpen,onClose,onError | Creates and opens a [WebSocket] instance. <br>ws = new ng2websocket('ws://foo',"proto",30,<br>&nbsp&nbsp(data)=>{this.onMessage(data);},<br>&nbsp&nbsp()=>{this.onOpen();},<br>&nbsp&nbsp()=>{this.onClose();},<br>&nbsp&nbsp()=>{this.onError();}<br>&nbsp&nbsp);
+ng2websocket <br>_constructor_ | addr:String,proto:string,reconnectMaxTimeS:number,<br>onMessage,onOpen,onClose,onError | Creates and opens a [WebSocket] instance. <br>ws = new ng2websocket("ws://addr","proto",30,<br>      (data)=>{this.onMessage(data);},<br>      ()=>{this.onOpen();},<br>      ()=>{this.onClose();},<br>      ()=>{this.onError();}<br>      );
 send        | data:String|ArrayBuffer                                                                               | send data
 close       |                                                                                                       | Close the underlying socket,
 
