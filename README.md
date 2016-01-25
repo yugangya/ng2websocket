@@ -18,15 +18,15 @@ You can download ng2websocket by:
 ### Methods
 
 name        | arguments                                              | description
-------------|--------------------------------------------------------|------------
+------------|-------------------------------------------------------------------------------------------------------|------------
 ng2websocket <br>_constructor_ | addr:String,proto:string,reconnectMaxTimeS:number,onMessage,onOpen,onClose,onError | Creates and opens a [WebSocket] instance. <br>`ws = new ng2websocket(addr,"rpcmain",reconnectMaxTimeS,
       (data)=>{this.onMessage(data);},
       ()=>{this.onOpen();},
       ()=>{this.onClose();},
       ()=>{this.onError();}
       );`
-send        | data:String|ArrayBuffer                                | send data
-close       |                                                        | Close the underlying socket,
+send        | data:String|ArrayBuffer                                                                               | send data
+close       |                                                                                                       | Close the underlying socket,
 
 
 
