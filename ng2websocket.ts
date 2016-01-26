@@ -1,5 +1,5 @@
-
-import {Injectable} from 'angular2/core';
+/// <reference path="../../node_modules/angular2/core.d.ts" />
+import {Injectable} from '../../node_modules/angular2/core';
 
 type onMessageCallback = (buf: ArrayBuffer|string) => void;
 type onOpenCallback = () => void;
@@ -16,7 +16,7 @@ export class ng2websocket {
   private connect(){
     this.ws=new WebSocket(this.addr,this.proto);
     this.ws.binaryType="arraybuffer";
-    this.ws.self=this;
+    this.ws['self']=this;
 
 
     this.ws.onmessage=function(event){

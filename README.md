@@ -9,6 +9,9 @@ You can download ng2websocket by:
 * Using npm and running `npm install ng2websocket --save`
 * Downloading it manually by clicking [here to download development unminified version](https://raw.github.com/vanishs/ng2websocket/master/ng2websocket.ts)
 
+## Import
+* import {ng2websocket} from 'ng2websocket/ng2websocket';
+
 ## Usage
 
 
