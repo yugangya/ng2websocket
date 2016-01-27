@@ -24,13 +24,13 @@ export class ng2websocket {
     };
 
     this.ws.onopen=function(event){
-      console.log("WebSocket connection Success");
+      console.log("[ng2websocket] connect Success");
       this.self._nowMs=100;
       this.self._onOpen();
     };
 
     this.ws.onclose=function(event){
-      console.log("reconnect",this.self.addr,"in",this.self._nowMs,"ms");
+      console.log("[ng2websocket] reconnect",this.self.addr,"in",this.self._nowMs,"ms");
       this.self._onClose();
       let self=this.self;
       setTimeout(function(){
@@ -44,7 +44,7 @@ export class ng2websocket {
     };
 
     this.ws.onerror=function(event){
-      console.log("WebSocket connection Error");
+      console.log("[ng2websocket] connect Error");
       this.self._onError();
     };
 
