@@ -24,13 +24,14 @@ export class ng2websocket {
     };
 
     this.ws.onopen=function(event){
+      console.log("WebSocket connection Success");
       this.self._nowMs=100;
       this.self._onOpen();
     };
 
     this.ws.onclose=function(event){
-      this.self._onClose();
       console.log("reconnect",this.self.addr,"in",this.self._nowMs,"ms");
+      this.self._onClose();
       let self=this.self;
       setTimeout(function(){
         self.connect();

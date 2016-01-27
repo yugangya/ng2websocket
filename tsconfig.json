@@ -15,5 +15,11 @@
     ],
     "exclude": [
         "node_modules"
-    ]
+    ],
+    "files": [
+        "./ng2websocket.ts"
+    ],
+    "atom": {
+        "rewriteTsconfig": true
+    }
 }
