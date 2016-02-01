@@ -16,36 +16,36 @@ export class ng2websocket {
   private connect(){
     this.ws=new WebSocket(this.addr,this.proto);
     this.ws.binaryType="arraybuffer";
-    this.ws['self']=this;
 
 
-    this.ws.onmessage=function(event){
-      this.self._onMessage(event.data)
+
+    this.ws.onmessage=(event)=>{
+      this._onMessage(event.data)
     };
 
-    this.ws.onopen=function(event){
+    this.ws.onopen=(event)=>{
       console.log("[ng2websocket] connect Success");
-      this.self._nowMs=100;
-      this.self._onOpen();
+      this._nowMs=100;
+      this._onOpen();
     };
 
-    this.ws.onclose=function(event){
-      console.log("[ng2websocket] reconnect",this.self.addr,"in",this.self._nowMs,"ms");
-      this.self._onClose();
-      let self=this.self;
-      setTimeout(function(){
-        self.connect();
-      },this.self._nowMs);
-      this.self._nowMs=this.self._nowMs*2;
+    this.ws.onclose=(event)=>{
+      console.log("[ng2websocket] reconnect",this.addr,"in",this._nowMs,"ms");
+      this._onClose();
 
-      if(this.self._nowMs>this.self.reconnectMaxTimeS*1000){
-        this.self._nowMs=this.self.reconnectMaxTimeS*1000;
+      setTimeout(()=>{
+        this.connect();
+      },this._nowMs);
+      this._nowMs=this._nowMs*2;
+
+      if(this._nowMs>this.reconnectMaxTimeS*1000){
+        this._nowMs=this.reconnectMaxTimeS*1000;
       }
     };
 
-    this.ws.onerror=function(event){
+    this.ws.onerror=(event)=>{
       console.log("[ng2websocket] connect Error");
-      this.self._onError();
+      this._onError();
     };
 
 
