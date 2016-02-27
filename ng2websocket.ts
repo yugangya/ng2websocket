@@ -1,4 +1,6 @@
 /// <reference path="../../node_modules/angular2/core.d.ts" />
+///<reference path="../../node_modules/angular2/typings/browser.d.ts"/>
+
 import {Injectable} from '../../node_modules/angular2/core';
 
 type onMessageCallback = (buf: ArrayBuffer|string) => void;

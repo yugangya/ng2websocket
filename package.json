@@ -1,6 +1,6 @@
 {
   "name": "ng2websocket",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "angular 2 websocket",
   "main": "ng2websocket.js",
   "scripts": {
