@@ -1,25 +1,23 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
-        "noImplicitAny": false,
-        "outDir": ".",
-        "rootDir": ".",
-        "sourceMap": false,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true
-    },
-    "filesGlob": [
-        "./**/*.ts",
-        "!./node_modules/**/*.ts"
-    ],
-    "exclude": [
-        "node_modules"
-    ],
-    "files": [
-        "./ng2websocket.ts"
-    ],
-    "atom": {
-        "rewriteTsconfig": true
-    }
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "declaration": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "newLine": "lf"
+  },
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }
